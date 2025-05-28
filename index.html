@@ -216,6 +216,55 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
+        .interactive-button-primary {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%) !important;
+            color: white !important;
+            border: none !important;
+            padding: 18px 40px !important;
+            border-radius: 30px !important;
+            font-size: 1.3em !important;
+            font-weight: bold !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            margin: 10px 20px !important;
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3) !important;
+            animation: pulse 2s infinite !important;
+        }
+
+        .interactive-button-primary:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 12px 35px rgba(0, 184, 148, 0.4) !important;
+        }
+
+        .interactive-button-secondary {
+            background: rgba(116, 185, 255, 0.2) !important;
+            color: #74b9ff !important;
+            border: 2px solid #74b9ff !important;
+            padding: 12px 25px !important;
+            border-radius: 20px !important;
+            font-size: 1em !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            margin: 10px !important;
+        }
+
+        .interactive-button-secondary:hover {
+            background: rgba(116, 185, 255, 0.1) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(0, 184, 148, 0.5);
+            }
+            100% {
+                box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3);
+            }
+        }
+
         .step-indicator {
             display: flex;
             justify-content: center;
@@ -505,8 +554,8 @@
             </div>
 
             <div style="text-align: center; margin-top: 30px;">
-                <button class="interactive-button" onclick="resetSteps()">🔄 Ver todo o processo novamente</button>
-                <button class="interactive-button" onclick="showSummary()">📋 Ver resumo completo</button>
+                <button class="interactive-button-primary" onclick="showSummary()">📋 Ver resumo completo</button>
+                <button class="interactive-button-secondary" onclick="resetSteps()">🔄 Voltar ao início</button>
             </div>
         </div>
 
